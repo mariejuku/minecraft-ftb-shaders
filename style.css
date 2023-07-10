@@ -1,0 +1,20 @@
+#out #entry {
+	display: block;
+	width: 500px;
+	height: 60px;
+}
+
+input#out {
+	width: 700px;
+	height: 600px;
+}
+
+#modtoggles label {
+	border: solid 1px lightgrey;
+	border-radius: 4px;
+	padding: 0em 1em;
+}
+
+#modtoggles label:hover {
+	background: lightblue;
+}

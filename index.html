@@ -1,0 +1,38 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+		<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <h1>Preprocessor</h1>
+        This is a tool that will generate .properties strings according to various conditions. It is useful for shader
+        pack creators to more easily support modded blocksets such as FTB.
+        <h2>Maker</h2>
+        <div class="row" id="modtoggles"></div>
+        <h2>Block.Properties</h2>
+        <textarea readonly id="propertiesoutput" style="width:100%; height:600px;"></textarea>
+        <h2>Block Variations</h2>
+        <input type="text" id="entry" />
+        <textarea readonly id="out" style="width:100%; height:600px;"></textarea>
+
+        <h2>Name macros</h2>
+        <input type="text" id="macro1_entry" />
+        <input type="text" id="macro2_entry" />
+        <textarea readonly id="macro_out" style="width:100%; height:600px;"></textarea>
+    </div>
+
+</body>
+<modstring>ad_astra,advancedperipherals,angelblockrenewed,antiblocksrechiseled,apotheosis,ae2,ars_creo,ars_instrumentum,ars_elemental,ars_nouveau,artifacts,bambooeverything,bno,botania,buildinggadgets,bygonenether,computercraft,cobblefordays,comforts,compactmachines,connectedglass,cookingforblockheads,create,createaddition,cyclic,darkutils,deepresonance,delightful,domum_ornamentum,elevatorid,enderstorage,engineersdecor,entangled,extrastorage,extremereactors,farmersdelight,fluxnetworks,forcecraft,framedblocks,functionalstorage,glassential,gobber2,hexcasting,hexerei,immersiveengineering,industrialforegoing,integrateddynamics,integratedterminals,ironchest,jaopca,laserio,littlecontraptions,littlelogistics,merequester,lootr,megacells,mahoutsukai,mekanism,mekanismadditions,mekanismgenerators,mekanismtools,minecolonies,colony4cc,mininggadgets,mob_grinding_utils,naturalist,naturesaura,occultism,byg,packingtape,pipez,playerplates,pneumaticcraft,powah,quark,rftoolsbase,rftoolsbuilder,rftoolsdim,rftoolspower,rftoolsutility,rsrequestify,rebornstorage,redstonepen,refinedcooking,refinedstorage,silentcompat,silentgear,simplylight,sophisticatedbackpacks,sophisticatedstorage,spirit,statues,sfm,supplementaries,technobauble,twilightforest,thermal,torchmaster,trashcans,travelanchors,unusualend,viescraftmachines,vitalize,waystones,whisperwoods,wirelesschargers,xnet,xycraft_override,xycraft_world,cfm,pfm,mcwfurnitures,another_furniture,handcrafted,mcwbridges,mcwfences,mcwpaths,giacomos_bookshelf,horizontal_glass_panes</modstring>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+    crossorigin="anonymous"></script>
+
+	<script src="script.js" type="module"></script>
+</html>
