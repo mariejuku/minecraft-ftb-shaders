@@ -1,4 +1,4 @@
-import {bink} from "shadermappings/bink.js";
+import {bink} from "./shadermappings/bink.js";
 console.log(bink);
     //make page
     mods = $("modstring").html().split(',');
