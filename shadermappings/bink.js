@@ -1,3 +1,1 @@
-bink = "binko";
-
-export {bink};
+export const bink = "binko";
