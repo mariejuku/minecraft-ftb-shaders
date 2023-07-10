@@ -1,0 +1,3 @@
+bink = "binko";
+
+export {bink};
