@@ -215,7 +215,7 @@ function selectshader(shader) {
 }
 
 function updatemacros(value){
-    $("#out").val(generator(value,modmacroforms,selectedmods));
+    $("#out").val(value != "" ? generator(value,modmacroforms,selectedmods) : "");
 }
 
 $("#entry").focus();
