@@ -9,12 +9,16 @@ input#out {
 	height: 600px;
 }
 
-#modtoggles label {
+#modtoggles label, #shadertoggles label {
 	border: solid 1px lightgrey;
 	border-radius: 4px;
 	padding: 0em 1em;
 }
 
-#modtoggles label:hover {
+#modtoggles label:hover, #shadertoggles label:hover {
 	background: lightblue;
+}
+
+#propertiesoutput {
+	font-size:.85em;
 }

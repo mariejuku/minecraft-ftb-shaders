@@ -10,14 +10,18 @@
 
 <body>
     <div class="container-fluid">
-        <h1>Preprocessor</h1>
+        <h1>Block.Properties Preprocessor</h1>
         This is a tool that will generate .properties strings according to various conditions. It is useful for shader
         pack creators to more easily support modded blocksets such as FTB.
-        <h2>Maker</h2>
+        
+        <div class="row" id="instancetoggles"></div>
         <div class="row" id="modtoggles"></div>
-        <h2>Block.Properties</h2>
+        <div class="row" id="shadertoggles"></div>
+        <button class="btn btn-primary" id="button_refresh">Refresh</button>
         <textarea readonly id="propertiesoutput" style="width:100%; height:600px;"></textarea>
+        
         <h2>Block Variations</h2>
+        <p>If you are supporting a new mod or shader, you will find the following macros useful.</p>
         <input type="text" id="entry" />
         <textarea readonly id="out" style="width:100%; height:600px;"></textarea>
 
@@ -28,7 +32,10 @@
     </div>
 
 </body>
-<modstring>ad_astra,advancedperipherals,angelblockrenewed,antiblocksrechiseled,apotheosis,ae2,ars_creo,ars_instrumentum,ars_elemental,ars_nouveau,artifacts,bambooeverything,bno,botania,buildinggadgets,bygonenether,computercraft,cobblefordays,comforts,compactmachines,connectedglass,cookingforblockheads,create,createaddition,cyclic,darkutils,deepresonance,delightful,domum_ornamentum,elevatorid,enderstorage,engineersdecor,entangled,extrastorage,extremereactors,farmersdelight,fluxnetworks,forcecraft,framedblocks,functionalstorage,glassential,gobber2,hexcasting,hexerei,immersiveengineering,industrialforegoing,integrateddynamics,integratedterminals,ironchest,jaopca,laserio,littlecontraptions,littlelogistics,merequester,lootr,megacells,mahoutsukai,mekanism,mekanismadditions,mekanismgenerators,mekanismtools,minecolonies,colony4cc,mininggadgets,mob_grinding_utils,naturalist,naturesaura,occultism,byg,packingtape,pipez,playerplates,pneumaticcraft,powah,quark,rftoolsbase,rftoolsbuilder,rftoolsdim,rftoolspower,rftoolsutility,rsrequestify,rebornstorage,redstonepen,refinedcooking,refinedstorage,silentcompat,silentgear,simplylight,sophisticatedbackpacks,sophisticatedstorage,spirit,statues,sfm,supplementaries,technobauble,twilightforest,thermal,torchmaster,trashcans,travelanchors,unusualend,viescraftmachines,vitalize,waystones,whisperwoods,wirelesschargers,xnet,xycraft_override,xycraft_world,cfm,pfm,mcwfurnitures,another_furniture,handcrafted,mcwbridges,mcwfences,mcwpaths,giacomos_bookshelf,horizontal_glass_panes</modstring>
+<modstring>minecraft,ad_astra,create,createaddition,quark,horizontal_glass_panes</modstring>
+<futuresupport>advancedperipherals,angelblockrenewed,antiblocksrechiseled,apotheosis,ae2,ars_creo,ars_instrumentum,ars_elemental,ars_nouveau,artifacts,bambooeverything,bno,botania,buildinggadgets,bygonenether,computercraft,cobblefordays,comforts,compactmachines,connectedglass,cookingforblockheads,,cyclic,darkutils,deepresonance,delightful,domum_ornamentum,elevatorid,enderstorage,engineersdecor,entangled,extrastorage,extremereactors,farmersdelight,fluxnetworks,forcecraft,framedblocks,functionalstorage,glassential,gobber2,hexcasting,hexerei,immersiveengineering,industrialforegoing,integrateddynamics,integratedterminals,ironchest,jaopca,laserio,littlecontraptions,littlelogistics,merequester,lootr,megacells,mahoutsukai,mekanism,mekanismadditions,mekanismgenerators,mekanismtools,minecolonies,colony4cc,mininggadgets,mob_grinding_utils,naturalist,naturesaura,occultism,byg,packingtape,pipez,playerplates,pneumaticcraft,powah,rftoolsbase,rftoolsbuilder,rftoolsdim,rftoolspower,rftoolsutility,rsrequestify,rebornstorage,redstonepen,refinedcooking,refinedstorage,silentcompat,silentgear,simplylight,sophisticatedbackpacks,sophisticatedstorage,spirit,statues,sfm,supplementaries,technobauble,twilightforest,thermal,torchmaster,trashcans,travelanchors,unusualend,viescraftmachines,vitalize,waystones,whisperwoods,wirelesschargers,xnet,xycraft_override,xycraft_world,cfm,pfm,mcwfurnitures,another_furniture,handcrafted,mcwbridges,mcwfences,mcwpaths,giacomos_bookshelf</futuresupport>
+<shaderstring>complementaryreimagined</shaderstring>
+<instancestring>direwolf20</instancestring>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
