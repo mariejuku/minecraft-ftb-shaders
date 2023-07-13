@@ -20,7 +20,18 @@ export default {
         bed: "create:white_seat create:orange_seat create:magenta_seat create:light_blue_seat create:yellow_seat create:lime_seat create:pink_seat create:gray_seat create:light_gray_seat create:cyan_seat create:purple_seat create:blue_seat create:brown_seat create:green_seat create:red_seat create:black_seat",
         noteblock:"create:cogwheel create:large_cogwheel create:water_wheel create:large_water_wheel create:andesite_casing create:gearbox create:clutch create:gearshift create:encased_chain_drive create:encased_fan create:adjustable_chain_gearshift create:rope_pulley create:stressometer create:speedometer create:linear_chassis create:secondary_linear_chassis create:radial_chassisc create:depot create:mechanical_press create:weighted_ejector",
         redstonecomponent:"create:pulse_extender create:powered_latch create:powered_toggle_latch create:pulse_repeater create:display_board",
-        lever:"create:analog_lever"
+        lever:"create:analog_lever",
+        oakdoor:"create:oak_window",
+        sprucedoor:"create:spruce_window",
+        birchdoor:"create:birch_window",
+        jungledoor:"create:jungle_window", 
+        acaciadoor:"create:acacia_window",
+        darkdoor:"create:dark_window",
+        mangrovedoor:"create:mangrove_window",
+        crimsondoor:"create:crimson_window",
+        warpeddoor:"create:warped_window",
+        cherrydoor:"create:cherry_window",
+         
     },
     forms: { //form groups
         stoneraw: {
