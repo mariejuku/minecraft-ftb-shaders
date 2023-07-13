@@ -36,19 +36,21 @@ If you're not the shader author, you can still use the original block.properties
 # Supporting a new mod: 
 To support a new mod, place a javascript file under the 'modmappings' folder in the repository.  Title it by the id of your mod -- the string that comes before the : when your mod's items appear in game. Everywhere you reference you mod, please use this same id, because the tool is not smart enough to adapt for different spellings or case. 
 The file should export a json object taking the following format:
-`export default {
+```
+export default {
     blocks: {},
     forms: {}
-}`
+}```
 
 The keys and values within *blocks* associate shader groups with blocks your mod has added. The group you choose instructs a shader on how that block should be displayed. Block names are seperated by spaces within the string. It's the block internal name, as displayed by debug mode.
 Example:
-`export default {
+```
+export default {
     blocks: {
         rawstone: "create:asurine create:cut_asurine",
         lapislazuli: "create:polished_cut_asurine create:polished_cut_asurine_slab",
     }
-}`
+}```
 The above mapping will tell a shader that it should treat the modded block just like it treats the default lapis lazuli block.
 
 When adding a mod's additional content, you only need to include blocks, not entities or items. You also do not need to be exhaustive if you aren't feeling like it; You can probably get away with only adding the most common or easily-visible blocks from the mod. The others will simply render without effects.
@@ -56,7 +58,8 @@ An example file is included.
 ### Macros
 You can use the other fields on the tool website to make this process easier. It can generate strings of several block variations at once that can be directly copied into the mapping file.
 The rules that govern these text macros are per-mod, and are defined in the *forms: {}* object.
-`forms: {
+```
+forms: {
   group1: {
     base:true,
     prefix: ["small","large"], //adds: small_block, large_block to the string
@@ -69,7 +72,7 @@ The rules that govern these text macros are per-mod, and are defined in the *for
     //above: you don't need to include forms you don't use.
   }
 }
-`
+```
 
 Every 'group' in forms will show up as a category in the resulting text output. **Mods that use the same groups will have their outputs combined**, which can make things more convenient.
 Base: If present and true, the unchanged block name will appear in the string. Good for blocks that are not vanilla variations.
