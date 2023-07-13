@@ -88,3 +88,93 @@ You may refer to the example file, but the mapping of the 'create' mod is also a
 
 ## Name  Macros
 This section just contains useful variations for specific blocks, such as the default minecraft colors. These are currently hardcoded within generator.js, but should be moved eventually.
+
+## Default Shader Groups
+The shader groups represent the communication between a mod and a shader. Mods and Shaders can both add or request new custom groups, but there's a chance of miscommunication if both sides are not aware of the custom group. 
+Below are the default groups that everyone should agree on, exhaustively. This is a reference -- if you are looking for a template to develop on, please copy the shadergroups.js file, which is formatted  much more helpfully for coding than the below list (it is already a json object).
+```
+Waving blocks:
+wave //large wave, fixed on bottom. default for grass, fern
+smallwave //small wave, fixed on bottom. crops, dead bush, saplings
+hangingwave //fixed on top. hanging roots
+verticalwave //some shaders implement this as a seamless repeating wave for hanging objects. 
+tallgrasslow, tallgrasshigh //top and bottom block of tall plants. Some shaders combine tallgrasshigh and verticalwave.
+treeleaves //tree leaves can be made to wave in many shaders.
+
+Wood-type blocks:
+oakwood,sprucewood,birchwood,junglewood,acaciawood,darkwood,mangrovewood,crimsonwood,warpedwood,cherrywood,
+oakplanks,spruceplanks,birchplanks,jungleplanks,acaciaplanks,darkplanks,mangroveplanks,crimsonplanks,warpedplanks,cherryplanks,
+oakdoor,sprucedoor,birchdoor,jungledoor,acaciadoor,darkdoor,mangrovedoor,crimsondoor,warpeddoor,bamboodoor,cherrydoor,
+
+Plant-type blocks:
+treeleaves, reeds, vines, dripleaf, waterlily,
+underwater  //for underwater plants and seaweeds
+seapickle,sealantern,coral,coralblock, //more specific than above
+grass, dirt, hay
+snowplant  //used for snowy grass, snowy podzol, snow mycelium block
+wetsoil //used for watered farmland
+bluenylium,rednylium,mushroombrown,mushroomred,mushroomstem,glowlichen,shroomlight,twistingvines,
+pumpkin,pumpkinlit,melon,chorusplant,cactus,bamboo,bambooblock,driedkelpblock,honeycomb,
+chorusflower, //levels 0-4
+chorusflowerfull, //level 5
+turtleegg,dragonegg,
+cavevinesplant, //no berries
+cavevinesplantfruit, //has berries
+flowerpot, //flower and sapling
+flowerpotmushroom, //azalea, and when containing large models
+torchflower,torchflowerpot,funguspot //warped and crimson plants
+froglightochre,froglightverdant,froglightpearl,
+
+Stone-type blocks:
+rawstone,rawgranite,rawdiorite,rawandesite,rawdeepslate,rawcalcite
+smoothstone,smoothgranite,smoothdiorite,smoothandesite,smoothdeepslate
+cobblestone,dripstone,
+reinforceddeepslate,
+
+Brick blocks:
+stonebrick,netherbrick,rednetherbrick,
+
+Other terrain blocks:
+sand,sandstone,redsand,redsandstone,blackstone,gildedblackstone,
+netherite,netherrack,soulsand,glowstone,boneblock,observer,
+terracotta,terracottaglazed,prismarine,prismarinedark,
+basalt,ancientdebris,endstone,bedrock,endportalempty,endportalsocketed,
+water, lava, fire, soulfire, magma,
+snow,ice,packedice,blueice,
+concrete,concretepowder,gravel,tuff,clay, //soft clay
+chain,cobweb,slime,honey,
+
+Ore-type blocks:
+ironbars,irondoor,
+ironore,copperore,goldore,diamondore,emeraldore,lapisore,quartzore,
+irondeepore,copperdeepore,golddeepore,goldnetherore,diamonddeepore,emeralddeepore,lapisdeepore,
+ironraw,copperraw,goldraw,
+ironblock,copperblock,goldblock,diamondblock,emeraldblock,lapisblock,quartzblock,amethystblock,redstoneblock,
+redstonewireon,redstonewireoff,redstoneoreon,redstoneoreoff,redstonedeeporeoff,redstonedeeporeon,
+amethystbud,
+obsidian,cryingobsidian,purpur,
+azalea,
+
+Contraption-type blocks:
+cauldron, watercauldron, snowcauldron, lavacauldron, //cauldron when empty and when containing liquids
+brewingstand, anvil, lectern,enchantingtable,chest,endchest,shulkerbox,conduit,beacon,
+rail //minecart rail blocks
+lever,torch,soultorch,redstonetorch,endrod,lantern,soullantern,campfire,campfirelit,soulcampfirelit,ladder,sign, //placed sign with writing
+redstonecomponent,redstonelampon,redstonelampoff,
+litfurnace,litblastfurnace,litsmoker,litcandle,
+structureblock,noteblock,carpet,bed,command,spawner,
+respawnanchorempty, //0 charges
+respawnanchor, //1+ charges
+sculk,sculkshrieker,
+sculksensoroff, //cooldown phase and calibrated inactive
+sculksensoron, //uncalibrated active
+sculksensoroncalibrated, //calibrated active
+portal,endportal,
+glass,//clear glass block
+glasspane, //clear glass pane
+stainedglass, //stained glass block (colored shadow) full block, not a 'pane'
+stainedglasspane, //stained glass pane (colored shadow)
+tintedglass, //tinted glass (dark shadow)
+
+layertranslucent //used for all blocks identified with 'layer.translucent:block' line within the file
+```
