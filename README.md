@@ -28,3 +28,9 @@ Mods and shaders both leverage a table of **Shader groups**. A given mod will as
 # Supporting a new shader:
 To support a new shader, place a javascript file under the 'shadermappings' folder in the repository. Title it by an id of your shader (no spaces). The file should export a json object with one key, with the same name. 
 As a developer of the shader, your block.properties file will likely have a list of block ids. In the file, associate these block ids with shader groups, and any blocks entered into those groups will be displayed as if they were that block id. Check the example file.
+![image](https://github.com/mariejuku/minecraft-ftb-shaders/assets/15624495/94923f51-4df4-4646-9a2d-a5efec493f47)
+
+
+# Supporting a new mod: 
+To support a new mod, place a javascript file under the 'modmappings' folder in the repository.  Title it by the id of your mod -- the string that comes before the : when your mod's items appear in game. Everywhere you reference you mod, please use this same id, because the tool is not smart enough to adapt for different spellings or case. 
+The file should export a json object with one key
