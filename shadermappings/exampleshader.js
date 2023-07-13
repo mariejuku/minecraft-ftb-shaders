@@ -1,0 +1,263 @@
+export default {
+    exampleshader: {
+        "block.#####": "shadergroup",
+        "block.#####": "shadergroup shadergroup shadergroup",
+        "layer.translucent": "shadergroup shadergroup"
+    }
+}
+
+/*
+For example....
+export default {
+    complementaryreimagined: {
+        "block.10000": "dripleaf",
+        "block.10004": "wave smallwave tallgrasslow",
+        "block.10008": "treeleaves",
+        "block.10012": "vines",
+
+        ...
+
+        "block.60008": "chest",
+        "block.60012": "endchest",
+        "block.60016": "shulkerbox bed",
+        "block.60020": "conduit",
+        "layer.translucent": "glass glasspane beacon"
+    }
+}
+*/
+
+/* Default (minecraft) shader groups:
+
+    wave: [], //waves more intensely than below. default for grass, fern
+    smallwave: [], //crops, dead bush, saplings
+    hangingwave: [], //fixed on top. hanging roots
+    verticalwave: [],//seamlessly repeated wave for hanging objects. Is actually the same as tallgrasshigh and the arrays get combined
+    tallgrasslow: [],
+    tallgrasshigh: [],
+    dripleaf: [], //dripleaf, lilypad
+    vines: [],
+    underwater: [],
+    treeleaves: [],
+    reeds: [],
+    brewingstand: [],
+    hay: [],
+    stonebrick: [],
+    anvil: [],
+    rail: [],
+    cauldron: [],
+    watercauldron: [],
+    snowcauldron: [],
+    lavacauldron: [],
+    lever: [],
+    lectern: [],
+    lava: [],
+    fire: [],
+    soulfire: [],
+    rawstone: [],
+    rawgranite: [],
+    rawdiorite: [],
+    rawandesite: [],
+    rawdeepslate: [],
+    rawcalcite: [],
+    smoothstone: [],
+    smoothgranite: [],
+    smoothdiorite: [],
+    smoothandesite: [],
+    smoothdeepslate: [],
+    dripstone: [],
+    grass: [],
+    dirt: [],
+    snowplant: [], //used for snowy grass, snowy podzol, snow mycelium block
+    wetsoil: [], //used in Complementary's for moist farmland
+    netherrack: [],
+    bluenylium: [],
+    rednylium: [],
+    cobblestone: [],
+    oakwood: [],
+    sprucewood: [],
+    birchwood: [],
+    junglewood: [],
+    acaciawood: [],
+    darkwood: [],
+    mangrovewood: [],
+    crimsonwood: [],
+    warpedwood: [],
+    cherrywood: [],
+    oakplanks: [],
+    spruceplanks: [],
+    birchplanks: [],
+    jungleplanks: [],
+    acaciaplanks: [],
+    darkplanks: [],
+    mangroveplanks: [],
+    crimsonplanks: [],
+    warpedplanks: [],
+    cherryplanks: [],
+    bedrock: [],
+    sand: [],
+    redsand: [],
+    sandstone: [],
+    redsandstone: [],
+    netherite: [],
+    ancientdebris: [],
+    ironbars: [],
+    irondoor: [],
+    ironblock: [],
+    ironraw: [],
+    ironore: [],
+    irondeepore: [],
+    copperblock: [],
+    copperraw: [],
+    copperore: [],
+    copperdeepore: [],
+    goldblock: [],
+    goldraw: [],
+    goldore: [],
+    golddeepore: [],
+    goldnetherore: [],
+    diamondblock: [],
+    diamondore: [],
+    diamonddeepore: [],
+    amethystblock: [],
+    amethystbud: [],
+    emeraldblock: [],
+    emeraldore: [],
+    emeralddeepore: [],
+    azalea: [],
+    lapisblock: [],
+    lapisore: [],
+    lapisdeepore: [],
+    quartzblock: [],
+    quartzore: [],
+    obsidian: [],
+    purpur: [],
+    snow: [],
+    packedice: [],
+    blueice: [],
+    pumpkin: [],
+    pumpkinlit: [],
+    soulsand: [],
+    basalt: [],
+    glowstone: [],
+    netherbrick: [],
+    rednetherbrick: [],
+    melon: [],
+    endstone: [],
+    terracotta: [],
+    terracottaglazed: [],
+    prismarine: [],
+    prismarinedark: [],
+    seapickle: [],
+    sealantern: [],
+    magma: [],
+    command: [],
+    concrete: [],
+    concretepowder: [],
+    coral: [],
+    coralblock: [],
+    cryingobsidian: [],
+    blackstone: [],
+    gildedblackstone: [],
+    waterlily: [],
+    torch: [],
+    endrod: [],
+    chorusplant: [],
+    chorusflower: [], //levels 0-4
+    chorusflowerfull: [], //level 5
+    litfurnace: [],
+    cactus: [],
+    noteblock: [],
+    soultorch: [],
+    mushroombrown: [],
+    mushroomred: [],
+    mushroomstem: [],
+    glowlichen: [],
+    enchantingtable: [],
+    endportalempty: [],
+    endportalsocketed: [],
+    lantern: [],
+    soullantern: [],
+    turtleegg: [],
+    dragonegg: [],
+    litsmoker: [],
+    litblastfurnace: [],
+    litcandle: [],
+    respawnanchorempty: [], //0 charges
+    respawnanchor: [], //1+ charges
+    redstonewireon: [],
+    redstonewireoff: [],
+    redstonetorch: [],
+    redstoneblock: [],
+    redstoneoreoff: [],
+    redstoneoreon: [],
+    redstonedeeporeoff: [],
+    redstonedeeporeon: [],
+    cavevinesplant: [], //no berries
+    cavevinesplantfruit: [], //has berries
+    redstonelampon: [],
+    redstonelampoff: [],
+    redstonecomponent: [],
+    shroomlight: [],
+    campfirelit: [],
+    soulcampfirelit: [],
+    campfire: [],
+    observer: [],
+    carpet: [],
+    boneblock: [],
+    honeycomb: [],
+    froglightochre: [],
+    froglightverdant: [],
+    froglightpearl: [],
+    reinforceddeepslate: [],
+    sculk: [],
+    sculkshrieker: [],
+    sculksensoroff: [], //cooldown phase and calibrated inactive
+    sculksensoron: [], //uncalibrated active
+    sculksensoroncalibrated: [], //calibrated active
+    spawner: [],
+    tuff: [],
+    clay: [], //soft clay
+    ladder: [], //wood ladder
+    gravel: [],
+    flowerpot: [], //flower and sapling
+    flowerpotmushroom: [], //azalea, 3d model
+    structureblock: [],
+    chain: [],
+    cobweb: [],
+    driedkelpblock: [],
+    bamboo: [],
+    bambooblock: [], //bamboo and scaffolding
+    torchflower: [],
+    torchflowerpot: [],
+    twistingvines: [],
+    funguspot: [], //warped and crimson plants
+    oakdoor: [],
+    sprucedoor: [],
+    birchdoor: [],
+    jungledoor: [],
+    acaciadoor: [],
+    darkdoor: [],
+    mangrovedoor: [],
+    crimsondoor: [],
+    warpeddoor: [],
+    bamboodoor: [],
+    cherrydoor: [],
+    stainedglass: [], //stained glass block (colored shadow) full block, not a 'pane'
+    stainedglasspane: [], //stained glass pane (colored shadow)
+    tintedglass: [], //tinted glass (dark shadow)
+    slime: [],
+    honey: [],
+    portal: [], //nether portal
+    endportal: [],
+    water: [],
+    ice: [],
+    glass: [],//clear glass block
+    glasspane: [], //clear glass pane
+    beacon: [],
+    sign: [], //placed sign with writing
+    chest: [],
+    endchest: [],
+    shulkerbox: [],
+    conduit: [],
+    layertranslucent: []
+*/
