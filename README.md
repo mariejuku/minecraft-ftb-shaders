@@ -40,7 +40,8 @@ The file should export a json object taking the following format:
 export default {
     blocks: {},
     forms: {}
-}```
+}
+```
 
 The keys and values within *blocks* associate shader groups with blocks your mod has added. The group you choose instructs a shader on how that block should be displayed. Block names are seperated by spaces within the string. It's the block internal name, as displayed by debug mode.
 Example:
@@ -50,7 +51,8 @@ export default {
         rawstone: "create:asurine create:cut_asurine",
         lapislazuli: "create:polished_cut_asurine create:polished_cut_asurine_slab",
     }
-}```
+}
+```
 The above mapping will tell a shader that it should treat the modded block just like it treats the default lapis lazuli block.
 
 When adding a mod's additional content, you only need to include blocks, not entities or items. You also do not need to be exhaustive if you aren't feeling like it; You can probably get away with only adding the most common or easily-visible blocks from the mod. The others will simply render without effects.
