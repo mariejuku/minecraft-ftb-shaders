@@ -6,19 +6,26 @@ let macro1 = "";
 let macro2 = "";
 
 //generate
+let macrokeys = {
+    colors:["white", "orange", "magenta", "light_blue", "yellow", "lime", "pink", "gray", "light_gray", "cyan", "purple", "blue", "brown", "green", "red", "black"],
+    woods: ["oak","spruce","birch","jungle","acacia","dark","mangrove","crimson","warped","cherry"]
+}
 let macros = function (name1, name2) {
-    let colors = ["white", "orange", "magenta", "light_blue", "yellow", "lime", "pink", "gray", "light_gray", "cyan", "purple", "blue", "brown", "green", "red", "black"];
-    let macroout = "colors:\n";
-    colors.forEach(element => {
-        let s = macro1;
-        if (s != "" && s.substring(s.length - 1) != ":") { s += "_"; }
-        s += element;
-        if (macro2 != "") {
-            s += "_" + macro2;
-        }
-        s += " ";
-        macroout += s;
-    });
+    let macroout = "";
+    for (const [key, value] of Object.entries(macrokeys)) {
+        macroout+=`${key}:\n`
+        value.forEach(element => {
+            let s = macro1;
+            if (s != "" && s.substring(s.length - 1) != ":") { s += "_"; }
+            s += element;
+            if (macro2 != "") {
+                s += "_" + macro2;
+            }
+            s += " ";
+            macroout += s;
+        });
+        macroout += "\n";
+    }
     document.getElementById('macro_out').value = macroout;
 }
 

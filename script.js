@@ -223,3 +223,5 @@ function updatemacros(value) {
 }
 
 $("#entry").focus();
+
+updatemacros();
