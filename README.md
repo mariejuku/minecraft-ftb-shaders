@@ -87,4 +87,4 @@ You can freely add new categories.
 You may refer to the example file, but the mapping of the 'create' mod is also an illustrative example of how this works, since it adds new variations for stone-type blocks.
 
 ## Name  Macros
-This section just contains useful variations for specific blocks, such as the default minecraft colors.
+This section just contains useful variations for specific blocks, such as the default minecraft colors. These are currently hardcoded within generator.js, but should be moved eventually.
