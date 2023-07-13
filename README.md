@@ -2,11 +2,11 @@
 Minecraft shader properties for FTB
 
 # What is this? 
-So I was playing FTB-Direwolf, and I added a shader pack to my minecraft install. The shader's visuals did not apply to the modded blocks -- But by modifying the shader's *block.properties* file, you can support the new blocks. I began making a macro to automate the process... one week later, *this* had happened.
+So I was playing FTB-Direwolf, and I added a shader pack to my minecraft install. The shader's visuals did not apply to the modded blocks -- But by modifying the shader's *block.properties* file, we can support the new blocks. I began making a macro to automate the process... one week later, *this* had happened.
 
 ## [mariejuku.github.io/minecraft-ftb-shaders](https://mariejuku.github.io/minecraft-ftb-shaders/)
 
-On this site is a tool that makes it easier to update the *block.properties* file of a Minecraft shader pack, in order to support mods and mod packs in a reusable way.
+On this site is a tool that makes it easier to update the *block.properties* file of a Minecraft shader pack, in order to support mods and mod packs in a reusable way. It's rough around the edges but it does the job.
 There are many shader packs for Minecraft, and they typically apply visual changes only to vanilla Minecraft blocks. We can change this though.
 
 | *Mod* |↔| *mapping table* |↔| *Shader*|
