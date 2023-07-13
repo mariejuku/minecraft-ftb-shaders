@@ -9,7 +9,6 @@ export default {
             infix:[["stripped", "log"], ["stripped", "wood"]]
         }
     },
-
     blocks: {
         dripleaf: "big_dripleaf_stem big_dripleaf small_dripleaf",
         wave: "grass fern",

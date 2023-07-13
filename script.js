@@ -16,7 +16,7 @@ let modmacroforms = {};
 let shadergroups = {};
 let currentshader = undefined;
 
-function tryContinue() {if (openrequests == 0) {proceed();}}
+function tryContinue() { if (openrequests == 0) { proceed(); } }
 let openrequests = 1;
 trymods.forEach(modstring => {
     openrequests++;
@@ -69,23 +69,23 @@ tryContinue();
 //properties maker below
 function mapmod(modname) {
     let selectedmap = modmapping[modname];
-    console.log(selectedmap);
+
     for (const [key, value] of Object.entries(selectedmap)) {
         if (!(key in shadergroups)) {
             shadergroups[key] = [];
         }
-        
-            let blocks = selectedmap[key].split(" ");
-            blocks.forEach(element => {
-                if (modname != "minecraft") {
-                    if (element.split(":")[0] != modname) {
-                        element = `${modname}:${element}`;
-                    }
+
+        let blocks = selectedmap[key].split(" ");
+        blocks.forEach(element => {
+            if (modname != "minecraft") {
+                if (element.split(":")[0] != modname) {
+                    element = `${modname}:${element}`;
                 }
-                shadergroups[key].push(element);
-            });
+            }
+            shadergroups[key].push(element);
+        });
     }
-    console.log(shadergroups);
+
 }
 function mapshader(shadername) {
     if (shadername == undefined) return;
@@ -94,13 +94,17 @@ function mapshader(shadername) {
     for (const [key, value] of Object.entries(selectedshader)) {
         let groups = value.split(" ");
         blockproperties[key] = [];
-        groups.forEach(element => {            
-            shadergroups[element].forEach(e => {
-                blockproperties[key].push(e);
-            });
+        groups.forEach(element => {
+            if (shadergroups[element] != undefined) {
+                shadergroups[element].forEach(e => {
+                    blockproperties[key].push(e);
+                });
+            } else {
+                console.log(`This shader references unexpected group ${element}.`);
+            }
         });
     }
-    
+
 
     let message = "";
     for (const [key, value] of Object.entries(blockproperties)) {
@@ -151,11 +155,11 @@ function proceed() {
         }
     );
 
-    $("#button_refresh").on("click",function(){updateproperties();});
-    $(".modtoggle").on("click",function(){selectmods();});
-    $(".shadertoggle").on("click",function(){selectshader($(this).attr("id"));});
+    $("#button_refresh").on("click", function () { updateproperties(); });
+    $(".modtoggle").on("click", function () { selectmods(); });
+    $(".shadertoggle").on("click", function () { selectshader($(this).attr("id")); });
 
-    $("#entry").on("input",function(event){updatemacros(event.target.value);});
+    $("#entry").on("input", function (event) { updatemacros(event.target.value); });
 
     //initialise
     selectinstance("direwolf20");
@@ -172,7 +176,7 @@ function updateproperties() {
             }
         }
     });
-    mapshader(currentshader);    
+    mapshader(currentshader);
 
     updatemacros($("#entry").val());
 }
@@ -214,8 +218,8 @@ function selectshader(shader) {
     updateproperties();
 }
 
-function updatemacros(value){
-    $("#out").val(value != "" ? generator(value,modmacroforms,selectedmods) : "");
+function updatemacros(value) {
+    $("#out").val(value != "" ? generator(value, modmacroforms, selectedmods) : "");
 }
 
 $("#entry").focus();
