@@ -32,6 +32,9 @@ As a developer of the shader, your block.properties file will likely have a list
 If you're not the shader author, you can still use the original block.properties to determine the appropriate blockid for a group.
 ![image](https://github.com/mariejuku/minecraft-ftb-shaders/assets/15624495/94923f51-4df4-4646-9a2d-a5efec493f47)
 
+# Supporting a new modpack:
+In the context of this tool, 'modpacks' are just an instruction to enable a particular set of mods. To add a new list, please modify the 'instances.js' file.
+
 
 # Supporting a new mod: 
 To support a new mod, place a javascript file under the 'modmappings' folder in the repository.  Title it by the id of your mod -- the string that comes before the : when your mod's items appear in game. Everywhere you reference you mod, please use this same id, because the tool is not smart enough to adapt for different spellings or case. 
