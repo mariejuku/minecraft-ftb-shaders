@@ -91,7 +91,9 @@ This section just contains useful variations for specific blocks, such as the de
 
 ## Default Shader Groups
 The shader groups represent the communication between a mod and a shader. Mods and Shaders can both add or request new custom groups, but there's a chance of miscommunication if both sides are not aware of the custom group. 
-Below are the default groups that everyone should agree on, exhaustively. This is a reference -- if you are looking for a template to develop on, please copy the shadergroups.js file, which is formatted  much more helpfully for coding than the below list (it is already a json object).
+Below are the default groups that everyone should agree on. This is a reference -- if you are looking for a template to develop on, please copy the shadergroups.js file, which is formatted  much more helpfully for coding than the below list (it is already a json object).
+
+Your shader does not  have to be this specific. A broad shading can be applied to many groups at once within the shadermapping.
 ```
 Waving blocks:
 wave //large wave, fixed on bottom. default for grass, fern
